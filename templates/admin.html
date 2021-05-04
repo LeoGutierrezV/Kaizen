@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1-0, minium-scale=1.0">
+  <title>ADMIN</title>
+  <link rel="stylesheet" type="text/css" href="/static/css admin/admin.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="shortcut icon" type="ico/icon" href="https://kaizendigital.sfo3.digitaloceanspaces.com/Kaizen/ICONO%20BUHO.png">
+</head>
+<body>
+  <input type="checkbox" id="check">
+  <header>
+    <label for="check">
+      <i class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    <div class="left_area">
+      <h3>KAIZEN <span>DIGITALS</span></h3>
+    </div>
+    <div class="right_area">
+      <a href="/" class="logout_btn">HOME</a>
+    </div>
+  </header>
+  <div class="sidebar">
+    <center>
+      <!--<img src="" alt="IMG PERFIL">-->
+      <h4>KaizenDigitals.net</h4>
+    </center>
+    <a href=""><i class="fas fa-sun"></i><span> Inicio</span></a>
+    <a href=""><i class="fas fa-envelope"></i><span> Mensajes</span></a>
+    <a href="/kaizen-logout"><i class="fas fa-sign-out-alt"></i><span> Cerrar Sesión</span></a>
+  </div>
+  <div class="content_img_admin_unic">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="white">Correos</h1>
+    <table class="table table-dark text-white">
+                <thead>
+                    <tr class="text-center text-white">
+                        <th class="text-white">Correo</th>
+                        <th class="text-white">Nombre</th>
+                        <th class="text-white">Mensaje</th>
+                        <th class="text-white">Opciones</th>
+                    </tr>
+                </thead>
+                {% for d in data %}
+                <tbody>
+                    <tr class="">
+                        <td class=""><!-- email -->{{d[2]}}</td>
+                        <td class="text-white"><!-- nombre -->{{ d[1] }}</td>
+                        <td><!-- mensaje -->{{d[3]}}</td>
+                        <td>
+                          <button class="btn btn-primary btn-small btnEditar">
+                            <i class="fa fa-edit"></i>
+                          </button>
+                          <button class="btn btn-danger btn-small btnEliminar">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                        </td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+        </table>
+  </div>
+</body>
+</html>

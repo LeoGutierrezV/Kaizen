@@ -1,0 +1,159 @@
+body{
+  margin:0;
+  padding: 0;
+}
+
+header{
+  position: fixed;
+  background: #252525;
+  padding: 20px;
+  width: 100%;
+  height: 30px;
+}
+.left_area {
+  margin-left: 20px !important;
+}
+.left_area h3{
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.left_area span {
+  color: #000;
+}
+.logout_btn{
+  padding: 5px;
+  background: #fff;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.logout_btn:hover{
+  background: #888888;
+}
+.sidebar{
+  background: #252525;
+  margin-top: 70px;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  transition: 0.5s;
+  transition-property: left;
+}
+
+.sidebar .profile_image_admin {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.sidebar h4{
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar a{
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px; 
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a:hover{
+  background: #000;
+}
+
+.sidebar i{
+  padding-right: 10px; 
+}
+
+label #sidebar_btn {
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 10px;
+  font-size: 20px;
+  margin: 5px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+label #sidebar_btn:hover{
+  color: #000;
+}
+#check:checked ~ .sidebar{
+  left: -200px;
+}
+#check:checked ~ .sidebar a span{
+  display: none;
+}
+#check:checked ~ .sidebar a {
+  font-size: 20px;
+  margin-left: 170px;
+  width: 80px;
+}
+#check{
+  display: none;
+}
+#check:checked ~ .content_img_admin_unic {
+  margin-left: 50px;
+}
+.content_img_admin_unic{
+  margin-left: 250px;
+  background: url(https://fabriziosurferwinn.sfo3.digitaloceanspaces.com/logos/bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+.table {
+  --bs-table-bg: #212529;
+  --bs-table-striped-color: #2c3034;
+  --bs-table-striped-bg: #fff;
+  --bs-table-active-color: #373b3e;
+  --bs-table-active-bg: #fff;
+  --bs-table-hover-color: #323539;
+  --bs-table-hover-bg: #fff;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #212529;
+  border-radius: 10px !important;
+}
+
+table ,th ,td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border: 10px !important;
+}
+table {
+  background: #212529;
+  color: #fff !important;
+  border-radius: 10px;
+}
+th ,td {
+  padding: 10px;
+}
+.white {
+  color: #fff;
+}

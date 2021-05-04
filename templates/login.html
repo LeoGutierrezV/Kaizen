@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1-0, minium-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <title>Kaizen Digitals</title>
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" href="/static/css admin/styleadmin.css">
+
+    <link rel="shortcut icon" type="ico/icon" href="https://kaizendigital.sfo3.digitaloceanspaces.com/Kaizen/ICONO%20BUHO.png">
+
+</head>
+<body>
+        <form action="/kaizen-login" method="post" class="login-form">
+          <p class="login-text">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+            </span>
+          </p>
+          <input type="text" class="login-username" name="name" autofocus="true" required="true" placeholder="Email" />
+          <input type="password" class="login-password" required="true" name="pass" placeholder="Password" />
+          <button type="submit" name="Login" value="Login" class="login-submit"><strong>Login</strong></button>
+          {% if data[0] %}
+          <div class="text-center red">
+            <p type="">
+              Usuario incorrecto!
+            </p>
+          </div>
+          {% endif %}
+          {% if data[1] %}
+          <div class="text-center red">
+            <p type="">Contraseña incorrecta!</p>
+          </div>
+          {% endif %}
+        </form>
+        <div class="underlay-photo"></div>
+        <div class="underlay-black"></div> 
+
+</body>
+</html>
